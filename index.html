@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SamTech Inc. </title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700">
+    <title>SamTech | Software Solutions Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
-
+    <link rel="icon" type="image/x-icon" href="./logo.png">
 </head>
-
 <body>
+    <header>
+        <div class="container">
+            <img src="./logo.png" alt="SamTech Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="header-image">
-  <img src="assets/logo-color.png" alt="SamTech" class="logo-img" width="200">
-</div>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to SamTech</h1>
+            <p>Your Trusted Software Solutions Partner</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
 
-<h1 class="page-title">Contact Information for SamTech Company</h1>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At SamTech, we harness the power of technology to drive innovation and transform businesses. As a leading software house, we specialize in crafting cutting-edge solutions that empower companies to thrive in the digital age.</p>
+        </div>
+    </section>
 
-<p class="welcome-message">Hello, SamTech User! If you'd like to reach us with questions, comments or suggestions, you can reach us using the following ways:</p>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Expertise</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>We build responsive and scalable websites tailored to your business needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Mobile App Development</h3>
+                    <p>Our team creates intuitive and user-friendly mobile apps for iOS and Android.</p>
+                </div>
+                <div class="card">
+                    <h3>Custom Software Solutions</h3>
+                    <p>Get custom software solutions designed to solve your specific business challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="industries" class="industries">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <p>From startups to enterprises, we proudly serve a range of industries, including finance, healthcare, and e-commerce. Our adaptable solutions cater to your specific industry needs.</p>
+        </div>
+    </section>
 
-<div class ="contact-list"></div>
-  <h2 class="contact-heading">Linkedin</h2>
-  <a href="https://www.linkedin.com/company/samtechs/about/" target="_blank" class="contact-info">https://www.linkedin.com/company/samtechs/about/</a>
-  <h2 class="contact-heading">Email</h2>
-  <p class="contact-info">samtechs.inc@gmail.com</p>
-</div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Let's collaborate and create software solutions that make a real impact! Reach out to us today.</p>
+            <a href="mailto:samtechs.inc@gmail.com" class="cta-button">Email Us</a>
+        </div>
+    </section>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2020 SamTech. All Rights Reserved. | Cairo, Egypt</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -67,7 +67,7 @@ nav ul li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.1); /* Dark overlay */
 }
 
 .hero h1 {
@@ -147,4 +147,50 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
     font-family: 'Raleway', sans-serif;
+}
+
+
+/* Service Image Styling */
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Adjust Card Layout for Better Visuals */
+.services .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adds space between cards */
+}
+
+.services .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center; /* Center-align text and images */
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .services .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services .card {
+        width: 100%;
+    }
 }

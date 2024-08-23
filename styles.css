@@ -19,6 +19,8 @@ body {
     overflow: hidden;
 }
 
+/* Start Header */
+/* Base Styles for Header */
 header {
     background-color: #333;
     color: #fff;
@@ -26,15 +28,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
+/* Logo Styling */
 header .logo {
     height: 50px;
     width: auto;
 }
 
+/* Navigation Styles */
+nav {
+    display: inline-block;
+}
+
 nav ul {
     list-style: none;
+    display: flex; /* Default layout */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -48,6 +63,73 @@ nav ul li a {
     font-size: 1.1em;
     font-family: 'Raleway', sans-serif;
 }
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the menu toggle to the far right */
+}
+.logo-icon-menu {
+    display: inline-block;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        display: none; /* Hide links by default on small screens */
+        width: 100%; /* Full width for the menu */
+        text-align: center;
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul.show {
+        display: flex; /* Show links when menu is toggled */
+    }
+
+    .logo-icon-menu {
+        display: flex;
+        margin-left: auto;
+        /* center items */
+        justify-content: space-between;
+    }
+    .header-container {
+        /* flex-direction: column;
+        align-items: flex-start; */
+        display: block;
+    }
+    .menu-toggle {
+        display: inline-block; /* Show menu button */
+        /* make it to be left */
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* End Header */
 
 .hero {
     background: url('assets/banner.webp') no-repeat center center/cover;

@@ -11,8 +11,11 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="assets/logo.png" alt="SamTech Logo" class="logo">
+        <div class="container header-container">
+            <div class="logo-icon-menu">
+                <img src="assets/logo.png" alt="SamTech Logo" class="logo">
+                <div class="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about">About Us</a></li>
@@ -23,6 +26,8 @@
             </nav>
         </div>
     </header>
+    
+    
 
     <section class="hero">
         <div class="container">
@@ -87,5 +92,17 @@
             <p>&copy; 2020 SamTech. All Rights Reserved. | Cairo, Egypt</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+    
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+    
 </body>
 </html>

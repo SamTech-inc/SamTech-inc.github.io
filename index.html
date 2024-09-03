@@ -13,7 +13,9 @@
     <header>
         <div class="container header-container">
             <div class="logo-icon-menu">
-                <img src="assets/logo.png" alt="SamTech Logo" class="logo">
+                <a href="/">
+                    <img src="assets/logo.png" alt="SamTech Logo" class="logo">
+                </a>
                 <div class="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
             </div>
             <nav>
@@ -29,11 +31,11 @@
     
     
 
-    <section class="hero">
-        <div class="container">
+    <section class="hero" id="hero">
+        <div class="container" style="background-color: rgba(0, 0, 0, 0.3);">
             <h1>Welcome to SamTech</h1>
             <p>Your Trusted Software Solutions Partner</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <a href="#contact" type="button" class="cta-button">Get in Touch</a>
         </div>
     </section>
 
@@ -103,6 +105,34 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+    
+            // Handle menu toggle for mobile
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+    
+            // Adjust scroll for sticky header
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const links = document.querySelectorAll('nav ul li a');
+    
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>    
     
 </body>
 </html>

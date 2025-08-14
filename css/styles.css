@@ -1,0 +1,29 @@
+/* SamTech Inc. minimal custom styles.
+   Tailwind utilities are loaded via CDN in index.html.
+   Keep this file small; only brand-specific bits live here. */
+
+:root{
+  --brand-cyan:#06b6d4;
+  --brand-emerald:#22c55e;
+}
+
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.75rem 1.25rem;
+  font-weight:700;
+  color:#fff;
+  border-radius:0.75rem;
+  text-decoration:none;
+  background-image:linear-gradient(90deg,var(--brand-cyan),var(--brand-emerald));
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  transition:transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.cta-button:hover{ transform:translateY(-1px); box-shadow:0 10px 22px rgba(0,0,0,.28); }
+.cta-button:active{ transform:translateY(0); opacity:.95; }
+.logo-glow{
+  filter: drop-shadow(0 6px 24px rgba(34, 197, 94, .25)) drop-shadow(0 2px 8px rgba(6, 182, 212, .35));
+}
+/* Optional cards when JS disabled (non-TW fallback) */
+.card{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:1rem; }
